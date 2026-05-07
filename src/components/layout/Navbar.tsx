@@ -8,7 +8,7 @@ const navItems = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-sky-100 bg-white/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
         <a href="#" className="text-sm font-semibold tracking-wide text-slate-900">
           Ryan Orense
@@ -16,7 +16,7 @@ export function Navbar() {
         <ul className="hidden gap-6 text-sm text-slate-700 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="transition hover:text-sky-600">
+              <a href={item.href} className="transition hover:text-blue-600">
                 {item.label}
               </a>
             </li>

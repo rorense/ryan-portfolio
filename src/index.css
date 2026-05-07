@@ -14,10 +14,7 @@ body {
   margin: 0;
   font-family: Inter, 'Segoe UI', Roboto, sans-serif;
   color: #1e293b;
-  background:
-    radial-gradient(circle at top right, rgba(14, 165, 233, 0.14), transparent 45%),
-    radial-gradient(circle at 15% 20%, rgba(250, 204, 21, 0.1), transparent 35%),
-    #f8fafc;
+  background: #f8fafc;
   line-height: 1.6;
 }
 
@@ -27,4 +24,8 @@ body {
 
 a {
   color: inherit;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
 }

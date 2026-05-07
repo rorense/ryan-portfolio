@@ -12,19 +12,22 @@ export function Skills() {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto max-w-5xl border-t border-sky-100 pt-12"
+        className="mx-auto max-w-5xl border-t border-slate-200 pt-12"
       >
-        <p className="text-sm uppercase tracking-[0.18em] text-sky-600">Skills</p>
-        <h2 className="mt-4 text-3xl font-semibold text-slate-900">Stack I work with</h2>
+        <p className="text-sm uppercase tracking-[0.18em] text-blue-600">Skills</p>
+        <h2 className="mt-4 text-3xl font-semibold text-slate-900">Skills</h2>
         <div className="mt-8 grid gap-5 md:grid-cols-2">
           {skillGroups.map((group) => (
-            <div key={group.label} className="rounded-md border border-sky-100 bg-white/85 p-5 shadow-sm">
+            <div key={group.label} className="rounded-lg border border-slate-200 bg-white p-5">
               <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-slate-800">
                 {group.label}
               </h3>
               <div className="mt-4 flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
-                  <span key={skill} className="rounded-full border border-sky-200 bg-sky-50 px-3 py-1 text-sm text-slate-700">
+                  <span
+                    key={skill}
+                    className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 text-sm text-slate-700"
+                  >
                     {skill}
                   </span>
                 ))}

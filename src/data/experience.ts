@@ -11,7 +11,7 @@ export const experience: ExperienceEntry[] = [
     highlights: [
       'Built and maintained web applications for 100+ clients.',
       'Delivered REST APIs, WordPress customizations, and SQL/NoSQL integrations.',
-      'Improved production performance and reliability across client systems.',
+      'Saved the company tens of thousands of dollars through website migrations and performance optimization.',
     ],
   },
   {

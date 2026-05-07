@@ -3,6 +3,7 @@ export interface Project {
   description: string
   outcome: string
   stack: string[]
+  heroImage: string
   liveUrl?: string
   githubUrl?: string
   category: string

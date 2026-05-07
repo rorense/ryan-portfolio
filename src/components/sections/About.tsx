@@ -11,10 +11,10 @@ export function About() {
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto grid max-w-5xl gap-10 border-t border-sky-100 pt-12 md:grid-cols-[1.2fr_0.8fr]"
+        className="mx-auto grid max-w-5xl gap-10 border-t border-slate-200 pt-12 md:grid-cols-[1.2fr_0.8fr]"
       >
         <div>
-          <p className="text-sm uppercase tracking-[0.18em] text-sky-600">About</p>
+        <p className="text-sm uppercase tracking-[0.18em] text-blue-600">About</p>
           <h2 className="mt-4 text-3xl font-semibold text-slate-900">From engineering sites to shipping software.</h2>
           <p className="mt-4 text-slate-700">
             I started on Auckland&apos;s Central Interceptor as a mechanical engineer. On-site, I
@@ -23,7 +23,7 @@ export function About() {
           </p>
           <p className="mt-4 text-slate-700">
             That pushed me into web development. These days I build with React, Node.js, and cloud
-            tools for teams that care about results, not vanity features.
+            tools for teams that need software to work properly day to day.
           </p>
           <p className="mt-6 text-slate-600">
             When I&apos;m not coding, I&apos;m on a pickleball court or a Shorinji Kempo mat.
@@ -37,7 +37,7 @@ export function About() {
             'B.E. (Hons) Mechanical Engineering, University of Auckland',
             'Based in Auckland, NZ',
           ].map((item) => (
-            <div key={item} className="rounded-md border border-sky-100 bg-white/80 px-4 py-3 text-slate-700 shadow-sm">
+            <div key={item} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700">
               {item}
             </div>
           ))}

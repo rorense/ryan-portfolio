@@ -13,7 +13,7 @@ function App() {
   const pickleMode = usePickleEgg()
 
   return (
-    <div className="min-h-screen bg-white text-slate-800">
+    <div className="min-h-screen bg-slate-50 text-slate-800">
       {pickleMode && <PickleRain />}
       <Navbar />
       <main>
