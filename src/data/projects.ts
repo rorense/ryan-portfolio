@@ -1,7 +1,8 @@
 import type { Project } from "../types";
 import paradoxImage from "../assets/paradox.png";
-import michaelReidImage from "../assets/MichaelReid.png";
-import proquipxImage from "../assets/proquipx.png";
+import michaelReidImage from "../assets/MichaelReid2.png";
+import proquipxImage from "../assets/proquipx2.png";
+import misenImage from "../assets/Mise.jpg";
 
 export const projects: Project[] = [
 	{
@@ -41,7 +42,7 @@ export const projects: Project[] = [
 			"A personal mobile app I built to keep track of recipes I have made over time. Instead of paying for another service, I built one that fits exactly how I cook.",
 		outcome: "Personal recipe tracker built from scratch",
 		stack: ["Mobile App", "Personal Product", "GitHub"],
-		heroImage: "https://picsum.photos/seed/miseen/1200/800",
+		heroImage: misenImage,
 		category: "Food + Productivity",
 		githubUrl: "https://github.com/rorense/mise",
 	},
