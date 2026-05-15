@@ -44,6 +44,6 @@ export const skillGroups: SkillGroup[] = [
   },
   {
     label: 'AI & Automation',
-    skills: ['OpenAI API', 'Claude', 'n8n', 'Cursor'],
+    skills: ['OpenAI API', 'Claude', 'AI Brain', 'n8n', 'Cursor'],
   },
 ]
