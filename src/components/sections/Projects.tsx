@@ -8,17 +8,17 @@ export function Projects() {
 	return (
 		<section
 			id="projects"
-			className="px-6 py-20">
+			className="px-4 py-14 md:px-6 md:py-20">
 			<motion.div
 				ref={ref}
 				initial={{ opacity: 0, y: 30 }}
 				animate={isInView ? { opacity: 1, y: 0 } : {}}
 				transition={{ duration: 0.5, ease: "easeOut" }}
-				className="mx-auto max-w-5xl border-t border-slate-200 pt-12">
+				className="mx-auto max-w-5xl border-t border-slate-200 pt-8 md:pt-12">
 				<p className="text-sm uppercase tracking-[0.18em] text-blue-600">Projects</p>
 				<h2 className="mt-4 text-3xl font-semibold text-slate-900">Projects</h2>
 				<p className="mt-2 max-w-2xl text-slate-600">Real projects built for real users.</p>
-				<div className="mt-10 grid gap-5 md:grid-cols-2">
+				<div className="mt-8 grid gap-4 md:mt-10 md:gap-5 md:grid-cols-2">
 					{projects.map((project) => (
 						<article
 							key={project.title}
@@ -33,11 +33,11 @@ export function Projects() {
 									loading="lazy"
 								/>
 							</div>
-							<div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
+							<div className="border-b border-slate-200 bg-slate-50 px-5 py-3 md:px-6 md:py-4">
 								<p className="text-xs uppercase tracking-[0.14em] text-slate-500">{project.category}</p>
 								<p className="mt-2 max-w-xl text-2xl font-semibold leading-tight text-slate-900">{project.outcome}</p>
 							</div>
-							<div className="p-6 md:grid md:grid-cols-[1fr_auto] md:gap-6">
+							<div className="p-5 md:grid md:grid-cols-[1fr_auto] md:gap-6 md:p-6">
 								<div>
 									<h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
 									<p className="mt-3 text-slate-700">{project.description}</p>
@@ -45,7 +45,7 @@ export function Projects() {
 										<span className="text-slate-700">Stack:</span> {project.stack.join(" · ")}
 									</p>
 								</div>
-								<div className="mt-5 flex gap-4 text-sm md:col-span-2">
+								<div className="mt-4 flex gap-4 text-sm md:col-span-2 md:mt-5">
 									{project.liveUrl && (
 										<a
 											href={project.liveUrl}

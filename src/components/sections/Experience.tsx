@@ -6,20 +6,20 @@ export function Experience() {
   const { ref, isInView } = useScrollReveal()
 
   return (
-    <section id="experience" className="px-6 py-20">
+    <section id="experience" className="px-4 py-14 md:px-6 md:py-20">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto max-w-5xl border-t border-slate-200 pt-12"
+        className="mx-auto max-w-5xl border-t border-slate-200 pt-8 md:pt-12"
       >
         <p className="text-sm uppercase tracking-[0.18em] text-blue-600">Experience</p>
         <h2 className="mt-4 text-3xl font-semibold text-slate-900">Experience</h2>
-        <div className="mt-10 border-l border-slate-300 pl-6">
+        <div className="mt-8 border-l border-slate-300 pl-4 md:mt-10 md:pl-6">
           {experience.map((entry) => (
-            <article key={`${entry.company}-${entry.period}`} className="relative mb-10 rounded-lg border border-slate-200 bg-white p-5 last:mb-0">
-              <span className="absolute -left-[30px] top-6 h-3 w-3 rounded-full bg-blue-500" />
+            <article key={`${entry.company}-${entry.period}`} className="relative mb-8 rounded-lg border border-slate-200 bg-white p-4 last:mb-0 md:mb-10 md:p-5">
+              <span className="absolute -left-[22px] top-5 h-3 w-3 rounded-full bg-blue-500 md:-left-[30px] md:top-6" />
               <div className="flex flex-wrap items-center gap-3">
                 <h3 className="text-xl font-semibold text-slate-900">{entry.role}</h3>
                 {entry.current && (

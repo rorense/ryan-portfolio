@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen bg-slate-50 text-slate-800 transition-opacity duration-500 ${
+      className={`min-h-screen bg-slate-50 text-slate-800 will-change-opacity transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
         isLoaded ? 'opacity-100' : 'opacity-0'
       }`}
     >

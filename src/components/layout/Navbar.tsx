@@ -9,7 +9,7 @@ const navItems = [
 export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
         <a href="#" className="text-sm font-semibold tracking-wide text-slate-900">
           Ryan Orense
         </a>

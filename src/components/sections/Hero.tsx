@@ -2,14 +2,14 @@ import { motion } from 'framer-motion'
 
 export function Hero() {
   return (
-    <section className="px-6 pb-16 pt-24 md:pt-28">
-      <div className="mx-auto grid max-w-5xl items-start gap-10 md:grid-cols-[1.25fr_0.75fr]">
+    <section className="px-4 pb-12 pt-20 md:px-6 md:pb-16 md:pt-28">
+      <div className="mx-auto grid max-w-5xl items-start gap-8 md:grid-cols-[1.25fr_0.75fr] md:gap-10">
         <div>
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-blue-600"
+          className="mb-3 text-sm font-medium uppercase tracking-[0.14em] text-blue-600 md:mb-4"
         >
           Software Engineer from Auckland
         </motion.p>
@@ -17,7 +17,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="max-w-3xl text-4xl font-bold leading-tight text-slate-900 md:text-6xl"
+          className="max-w-3xl text-3xl font-bold leading-tight text-slate-900 md:text-6xl"
         >
           I build websites and apps that people actually use.
         </motion.h1>
@@ -25,12 +25,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.55 }}
-          className="mt-6 max-w-2xl text-lg text-slate-800"
+          className="mt-4 max-w-2xl text-base text-slate-800 md:mt-6 md:text-lg"
         >
           I started in mechanical engineering, moved into software, and now build full stack
           products that are practical, fast, and reliable.
         </motion.p>
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-8 flex flex-wrap gap-3 md:mt-10 md:gap-4">
           <a
             href="#projects"
             className="rounded-md bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700"

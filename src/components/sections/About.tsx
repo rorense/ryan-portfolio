@@ -5,13 +5,13 @@ export function About() {
   const { ref, isInView } = useScrollReveal()
 
   return (
-    <section id="about" className="px-6 py-20">
+    <section id="about" className="px-4 py-14 md:px-6 md:py-20">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 30 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto grid max-w-5xl gap-10 border-t border-slate-200 pt-12 md:grid-cols-[1.2fr_0.8fr]"
+        className="mx-auto grid max-w-5xl gap-8 border-t border-slate-200 pt-8 md:grid-cols-[1.2fr_0.8fr] md:gap-10 md:pt-12"
       >
         <div>
         <p className="text-sm uppercase tracking-[0.18em] text-blue-600">About</p>
