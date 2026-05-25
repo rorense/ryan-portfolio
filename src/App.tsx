@@ -8,12 +8,26 @@ import { Hero } from './components/sections/Hero'
 import { Projects } from './components/sections/Projects'
 import { Skills } from './components/sections/Skills'
 import { usePickleEgg } from './hooks/usePickleEgg'
+import { useEffect, useState } from 'react'
 
 function App() {
   const pickleMode = usePickleEgg()
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      setIsLoaded(true)
+    })
+
+    return () => cancelAnimationFrame(frame)
+  }, [])
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-800">
+    <div
+      className={`min-h-screen bg-slate-50 text-slate-800 transition-opacity duration-500 ${
+        isLoaded ? 'opacity-100' : 'opacity-0'
+      }`}
+    >
       {pickleMode && <PickleRain />}
       <Navbar />
       <main>
