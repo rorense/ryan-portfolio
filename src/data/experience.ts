@@ -9,10 +9,11 @@ export const experience: ExperienceEntry[] = [
     current: true,
     emoji: '🥒',
     highlights: [
-      'Built and maintained web applications for 100+ clients.',
+      'Built and maintained web applications for 600+ clients.',
       'Delivered REST APIs, WordPress customizations, and SQL/NoSQL integrations.',
       'Implemented an in-house AI brain that streamlined workflows, automated repetitive work, and improved how the team delivers client projects.',
       'Saved the company tens of thousands of dollars through website migrations and performance optimization.',
+      'Mentored and managed multiple interns, guiding their technical growth and professional development through code reviews, pair programming, and structured feedback.',
     ],
   },
   {
