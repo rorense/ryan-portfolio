@@ -1,75 +1,103 @@
-import { motion } from "framer-motion";
-import { projects } from "../../data/projects";
-import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { projects } from '../../data/projects'
 
 export function Projects() {
-	const { ref, isInView } = useScrollReveal();
+  return (
+    <section id="projects" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
+      <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="md:col-span-3">
+          <h2 className="section-title">Selected work.</h2>
+        </div>
 
-	return (
-		<section
-			id="projects"
-			className="px-4 py-14 md:px-6 md:py-20">
-			<motion.div
-				ref={ref}
-				initial={{ opacity: 0, y: 30 }}
-				animate={isInView ? { opacity: 1, y: 0 } : {}}
-				transition={{ duration: 0.5, ease: "easeOut" }}
-				className="mx-auto max-w-5xl border-t border-slate-200 pt-8 md:pt-12">
-				<p className="text-sm uppercase tracking-[0.18em] text-blue-600">Projects</p>
-				<h2 className="mt-4 text-3xl font-semibold text-slate-900">Projects</h2>
-				<p className="mt-2 max-w-2xl text-slate-600">Real projects built for real users.</p>
-				<div className="mt-8 grid gap-4 md:mt-10 md:gap-5 md:grid-cols-2">
-					{projects.map((project) => (
-						<article
-							key={project.title}
-							className={`group overflow-hidden rounded-lg border bg-white transition hover:border-slate-300 ${
-								project.featured ? "border-blue-300" : "border-slate-200"
-							}`}>
-							<div className="aspect-[16/10] overflow-hidden border-b border-slate-200 bg-slate-100">
-								<img
-									src={project.heroImage}
-									alt={`${project.title} preview`}
-									className="h-full w-full object-cover"
-									loading="lazy"
-								/>
-							</div>
-							<div className="border-b border-slate-200 bg-slate-50 px-5 py-3 md:px-6 md:py-4">
-								<p className="text-xs uppercase tracking-[0.14em] text-slate-500">{project.category}</p>
-								<p className="mt-2 max-w-xl text-2xl font-semibold leading-tight text-slate-900">{project.outcome}</p>
-							</div>
-							<div className="p-5 md:grid md:grid-cols-[1fr_auto] md:gap-6 md:p-6">
-								<div>
-									<h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
-									<p className="mt-3 text-slate-700">{project.description}</p>
-									<p className="mt-4 text-sm text-slate-500">
-										<span className="text-slate-700">Stack:</span> {project.stack.join(" · ")}
-									</p>
-								</div>
-								<div className="mt-4 flex gap-4 text-sm md:col-span-2 md:mt-5">
-									{project.liveUrl && (
-										<a
-											href={project.liveUrl}
-											target="_blank"
-											rel="noreferrer"
-											className="font-semibold text-sky-700 hover:text-sky-900">
-											Live site
-										</a>
-									)}
-									{project.githubUrl && (
-										<a
-											href={project.githubUrl}
-											target="_blank"
-											rel="noreferrer"
-											className="font-semibold text-slate-600 hover:text-slate-900">
-											GitHub
-										</a>
-									)}
-								</div>
-							</div>
-						</article>
-					))}
-				</div>
-			</motion.div>
-		</section>
-	);
+        <div className="md:col-span-9">
+          <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
+            Five projects, from a Shopify storefront turning over $600k a year to a recipe app I
+            built because I didn’t want to pay for one.
+          </p>
+
+          <div className="mt-10 md:mt-12">
+            {projects.map((project, index) => {
+              const href = project.liveUrl ?? project.githubUrl
+
+              return (
+                <article
+                  key={project.title}
+                  className="group grid gap-x-10 gap-y-6 border-t border-rule py-10 last:border-b md:grid-cols-[9rem_1fr] md:py-14"
+                >
+                  <div className="md:pt-1">
+                    <p className="label">{project.category}</p>
+                    <ul className="mt-3 space-y-1">
+                      {project.stack.map((item) => (
+                        <li key={item} className="text-sm leading-snug text-ink-soft">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div className="overflow-hidden bg-paper-deep">
+                      <img
+                        src={project.heroImage}
+                        alt={`${project.title} — screenshot`}
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        decoding="async"
+                        className={`w-full object-cover transition-transform duration-[900ms] ease-settle group-hover:scale-[1.018] ${
+                          project.featured ? 'aspect-[21/9]' : 'aspect-[16/10]'
+                        }`}
+                      />
+                    </div>
+
+                    <h3
+                      className={`mt-7 font-serif font-normal leading-[1.05] tracking-[-0.025em] text-ink ${
+                        project.featured
+                          ? 'text-[clamp(2rem,4.5vw,3rem)]'
+                          : 'text-[clamp(1.75rem,3.5vw,2.375rem)]'
+                      }`}
+                    >
+                      {project.title}
+                    </h3>
+                    {/* Register mark: a hairline that wipes in under the title on hover. */}
+                    <div className="mt-2 h-px w-full origin-left scale-x-0 bg-vermilion transition-transform duration-500 ease-settle group-hover:scale-x-100" />
+
+                    <p className="mt-4 max-w-measure font-serif text-xl italic leading-snug text-ink md:text-[1.375rem]">
+                      {project.outcome}
+                    </p>
+
+                    <p className="mt-4 max-w-measure leading-[1.6] text-ink-mid">
+                      {project.description}
+                    </p>
+
+                    {href && (
+                      <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3">
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="label underline decoration-rule decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
+                          >
+                            Visit the site
+                          </a>
+                        )}
+                        {project.githubUrl && (
+                          <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="label underline decoration-rule decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
+                          >
+                            Read the source
+                          </a>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }

@@ -1,3 +1,5 @@
+import { MotionConfig } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Footer } from './components/layout/Footer'
 import { Navbar } from './components/layout/Navbar'
 import { PickleRain } from './components/PickleRain'
@@ -8,7 +10,6 @@ import { Hero } from './components/sections/Hero'
 import { Projects } from './components/sections/Projects'
 import { Skills } from './components/sections/Skills'
 import { usePickleEgg } from './hooks/usePickleEgg'
-import { useEffect, useState } from 'react'
 
 function App() {
   const pickleMode = usePickleEgg()
@@ -23,23 +24,25 @@ function App() {
   }, [])
 
   return (
-    <div
-      className={`min-h-screen bg-slate-50 text-slate-800 will-change-opacity transition-opacity duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-        isLoaded ? 'opacity-100' : 'opacity-0'
-      }`}
-    >
-      {pickleMode && <PickleRain />}
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <MotionConfig reducedMotion="user">
+      <div
+        className={`min-h-screen bg-paper text-ink transition-opacity duration-500 ease-settle ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        {pickleMode && <PickleRain />}
+        <Navbar />
+        <main id="top">
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Experience />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </MotionConfig>
   )
 }
 

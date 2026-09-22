@@ -1,6 +1,4 @@
-import { motion } from 'framer-motion'
 import { experience } from '../../data/experience'
-import { useScrollReveal } from '../../hooks/useScrollReveal'
 
 const monthIndex: Record<string, number> = {
   Jan: 0,
@@ -63,56 +61,68 @@ function formatDuration(period: string) {
 }
 
 export function Experience() {
-  const { ref, isInView } = useScrollReveal()
-
   return (
-    <section id="experience" className="px-4 py-14 md:px-6 md:py-20">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto max-w-5xl border-t border-slate-200 pt-8 md:pt-12"
-      >
-        <p className="text-sm uppercase tracking-[0.18em] text-blue-600">Experience</p>
-        <h2 className="mt-4 text-3xl font-semibold text-slate-900">Experience</h2>
-        <div className="mt-8 border-l border-slate-300 pl-4 md:mt-10 md:pl-6">
+    <section id="experience" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
+      <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="md:col-span-3">
+          <h2 className="section-title">Where I’ve worked.</h2>
+        </div>
+
+        <div className="md:col-span-9">
           {experience.map((entry) => {
             const duration = formatDuration(entry.period)
 
             return (
-              <article key={`${entry.company}-${entry.period}`} className="relative mb-8 rounded-lg border border-slate-200 bg-white p-4 last:mb-0 md:mb-10 md:p-5">
-                <span className="absolute -left-[22px] top-5 h-3 w-3 rounded-full bg-blue-500 md:-left-[30px] md:top-6" />
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 className="text-xl font-semibold text-slate-900">{entry.role}</h3>
+              <article
+                key={`${entry.company}-${entry.period}`}
+                className="grid gap-x-10 gap-y-4 border-t border-rule py-8 last:border-b md:grid-cols-[9rem_1fr] md:py-10"
+              >
+                <div className="md:pt-2">
+                  <p className="label tabular-nums">{entry.period.replace(' - ', ' – ')}</p>
+                  {duration && (
+                    <p className="mt-1 text-sm tabular-nums text-ink-soft">{duration}</p>
+                  )}
                   {entry.current && (
-                    <span className="rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold text-blue-700">
-                      Present
-                    </span>
+                    <p className="label mt-3 text-vermilion">Current</p>
                   )}
                 </div>
-                <p className="mt-2 text-slate-700">
-                  {entry.companyUrl ? (
-                    <a href={entry.companyUrl} target="_blank" rel="noreferrer" className="hover:text-sky-700">
-                      {entry.company}
-                      {entry.emoji ? ` ${entry.emoji}` : ''}
-                    </a>
-                  ) : (
-                    entry.company
-                  )}{' '}
-                  · {entry.period}
-                  {duration ? ` (${duration})` : ''}
-                </p>
-                <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-600">
-                  {entry.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
+
+                <div>
+                  <h3 className="font-serif text-2xl font-normal leading-tight tracking-[-0.015em] text-ink md:text-[1.75rem]">
+                    {entry.role}
+                  </h3>
+                  <p className="mt-1.5 text-ink-soft">
+                    {entry.companyUrl ? (
+                      <a
+                        href={entry.companyUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline decoration-rule decoration-1 underline-offset-4 transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
+                      >
+                        {entry.company}
+                      </a>
+                    ) : (
+                      entry.company
+                    )}
+                    {entry.emoji ? ` ${entry.emoji}` : ''}
+                  </p>
+
+                  <ul className="mt-5 max-w-measure space-y-2.5 text-ink-mid">
+                    {entry.highlights.map((highlight) => (
+                      <li key={highlight} className="flex gap-3 leading-[1.6]">
+                        <span aria-hidden="true" className="select-none text-ink-soft">
+                          &#8212;
+                        </span>
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </article>
             )
           })}
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }

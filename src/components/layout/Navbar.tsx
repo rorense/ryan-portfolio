@@ -1,6 +1,6 @@
 const navItems = [
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Work', href: '#projects' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: '#contact' },
@@ -8,20 +8,32 @@ const navItems = [
 
 export function Navbar() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <nav className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <a href="#" className="text-sm font-semibold tracking-wide text-slate-900">
+    <header className="sticky top-0 z-50 border-b border-rule bg-paper">
+      <nav className="wrap flex items-baseline justify-between py-3 md:py-4">
+        <a
+          href="#top"
+          className="font-serif text-base tracking-[-0.01em] text-ink transition-colors duration-200 hover:text-vermilion md:text-lg"
+        >
           Ryan Orense
         </a>
-        <ul className="hidden gap-6 text-sm text-slate-700 md:flex">
+
+        <ul className="hidden items-baseline gap-7 md:flex">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="transition hover:text-blue-600">
+              <a
+                href={item.href}
+                className="label transition-colors duration-200 hover:text-vermilion"
+              >
                 {item.label}
               </a>
             </li>
           ))}
         </ul>
+
+        {/* Mobile keeps only the one link that matters; the page is a single scroll. */}
+        <a href="#contact" className="label transition-colors duration-200 hover:text-vermilion md:hidden">
+          Contact
+        </a>
       </nav>
     </header>
   )

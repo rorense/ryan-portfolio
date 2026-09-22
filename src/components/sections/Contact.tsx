@@ -1,39 +1,53 @@
+const channels = [
+  { label: 'Email', value: 'rkorense@gmail.com', href: 'mailto:rkorense@gmail.com' },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/ryan-orense',
+    href: 'https://www.linkedin.com/in/ryan-orense/',
+  },
+  { label: 'GitHub', value: 'github.com/rorense', href: 'https://github.com/rorense' },
+]
+
 export function Contact() {
   return (
-    <section id="contact" className="px-4 py-14 md:px-6 md:py-20">
-      <div className="mx-auto max-w-5xl border-t border-slate-200 pt-8 md:pt-12">
-        <p className="text-sm uppercase tracking-[0.18em] text-blue-600">Contact</p>
-        <h2 className="mt-4 text-3xl font-semibold text-slate-900">Contact</h2>
-        <p className="mt-3 text-slate-700">
-          If you are hiring or have a project in mind, feel free to reach out.
-        </p>
+    <section id="contact" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
+      <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="md:col-span-3">
+          <h2 className="section-title">Get in touch.</h2>
+        </div>
 
-        <div className="mt-6 grid gap-3 md:mt-8 md:gap-4 md:grid-cols-3">
-          <a
-            href="mailto:rkorense@gmail.com"
-            className="rounded-lg border border-slate-200 bg-white p-4 transition hover:border-slate-300"
-          >
-            <p className="text-xs uppercase tracking-[0.12em] text-slate-500">Email</p>
-            <p className="mt-2 text-sm text-slate-900">rkorense@gmail.com</p>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ryan-orense/"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-slate-200 bg-white p-4 transition hover:border-slate-300"
-          >
-            <p className="text-xs uppercase tracking-[0.12em] text-slate-500">LinkedIn</p>
-            <p className="mt-2 text-sm text-slate-900">linkedin.com/in/ryan-orense</p>
-          </a>
-          <a
-            href="https://github.com/rorense"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg border border-slate-200 bg-white p-4 transition hover:border-slate-300"
-          >
-            <p className="text-xs uppercase tracking-[0.12em] text-slate-500">GitHub</p>
-            <p className="mt-2 text-sm text-slate-900">github.com/rorense</p>
-          </a>
+        <div className="md:col-span-9">
+          <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
+            If you’re hiring, or you have something that needs building properly, the fastest way to
+            reach me is email. I read everything.
+          </p>
+
+          <ul className="mt-10 md:mt-12">
+            {channels.map((channel) => (
+              <li key={channel.label} className="border-t border-rule last:border-b">
+                <a
+                  href={channel.href}
+                  {...(channel.href.startsWith('http')
+                    ? { target: '_blank', rel: 'noreferrer' }
+                    : {})}
+                  className="group flex flex-wrap items-baseline gap-x-8 gap-y-1 py-5 transition-colors duration-200 hover:text-vermilion md:gap-x-10 md:py-6"
+                >
+                  <span className="label w-24 transition-colors duration-200 group-hover:text-vermilion">
+                    {channel.label}
+                  </span>
+                  <span className="font-serif text-xl tracking-[-0.01em] md:text-2xl">
+                    {channel.value}
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    className="ml-auto hidden translate-x-0 font-sans text-sm text-ink-soft transition-[transform,color] duration-300 ease-settle group-hover:translate-x-1.5 group-hover:text-vermilion md:block"
+                  >
+                    &#8594;
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

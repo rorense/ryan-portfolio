@@ -2,30 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #c9bfaa #faf7f0;
+  }
+
+  body {
+    @apply bg-paper font-serif text-ink;
+    margin: 0;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    color: inherit;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: from-font;
+  }
+
+  /* Browser surfaces: the parts of the page nobody draws, themed from the palette. */
+  ::selection {
+    @apply bg-highlighter text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-vermilion;
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 3px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-paper;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #c9bfaa;
+    border: 3px solid #faf7f0;
+    border-radius: 99px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #a89d85;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[74rem] px-6 md:px-10;
+  }
+
+  /* Marginalia label: the quiet Archivo voice that carries meta, never a heading. */
+  .label {
+    @apply font-sans text-[0.6875rem] font-medium uppercase tracking-[0.13em] text-ink-soft;
+  }
+
+  .section-title {
+    @apply font-serif text-2xl font-normal leading-[1.15] text-ink md:text-[1.75rem];
+  }
 }
 
-body {
-  margin: 0;
-  font-family: Inter, 'Segoe UI', Roboto, sans-serif;
-  color: #1e293b;
-  background: #ffffff;
-  line-height: 1.6;
-}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 
-#root {
-  min-height: 100vh;
-}
-
-a {
-  color: inherit;
-}
-
-::selection {
-  background: rgba(59, 130, 246, 0.2);
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

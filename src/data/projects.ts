@@ -1,8 +1,9 @@
 import type { Project } from "../types";
-import paradoxImage from "../assets/paradox.png";
+import paradoxImage from "../assets/paradox.jpg";
 import michaelReidImage from "../assets/MichaelReid2.png";
+import vvbakesImage from "../assets/vvbakes.png";
 import proquipxImage from "../assets/proquipx2.png";
-import misenImage from "../assets/Mise.jpg";
+import misenImage from "../assets/Mise-frames.jpg";
 
 export const projects: Project[] = [
 	{
@@ -25,6 +26,16 @@ export const projects: Project[] = [
 		heroImage: michaelReidImage,
 		category: "Mobile App",
 		liveUrl: "https://apps.apple.com/nz/app/michael-reid-gallery/id6742937867",
+	},
+	{
+		title: "vvbakes",
+		description:
+			"Built a Next.js site for a home bakery in Flat Bush — availability that closes out booked and short-notice dates, a menu with pricing, and a custom cake brief that arrives as a structured order request.",
+		outcome: "A live booking calendar that takes orders without a checkout",
+		stack: ["Next.js", "React", "Vercel"],
+		heroImage: vvbakesImage,
+		category: "Orders & Booking",
+		liveUrl: "https://vvbakes.co.nz",
 	},
 	{
 		title: "Proquip Solutions Dashboard",

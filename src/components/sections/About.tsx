@@ -1,48 +1,50 @@
-import { motion } from 'framer-motion'
-import { useScrollReveal } from '../../hooks/useScrollReveal'
+const credentials = [
+  { award: 'B.E. (Hons) Mechanical Engineering', detail: 'University of Auckland' },
+  { award: 'Postgraduate Certificate in IT', detail: 'University of Auckland' },
+  { award: 'AWS Certified Cloud Practitioner', detail: '2025' },
+]
 
 export function About() {
-  const { ref, isInView } = useScrollReveal()
-
   return (
-    <section id="about" className="px-4 py-14 md:px-6 md:py-20">
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="mx-auto grid max-w-5xl gap-8 border-t border-slate-200 pt-8 md:grid-cols-[1.2fr_0.8fr] md:gap-10 md:pt-12"
-      >
-        <div>
-        <p className="text-sm uppercase tracking-[0.18em] text-blue-600">About</p>
-          <h2 className="mt-4 text-3xl font-semibold text-slate-900">From engineering sites to shipping software.</h2>
-          <p className="mt-4 text-slate-700">
-            I started on Auckland&apos;s Central Interceptor as a mechanical engineer. On-site, I
-            kept noticing the same thing: when operations had better software, everything moved
-            faster.
-          </p>
-          <p className="mt-4 text-slate-700">
-            That pushed me into web development. These days I build with React, Node.js, and cloud
-            tools for teams that need software to work properly day to day.
-          </p>
-          <p className="mt-6 text-slate-600">
-            When I&apos;m not coding, I&apos;m on a pickleball court or a Shorinji Kempo mat.
-          </p>
+    <section id="about" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
+      <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
+        <div className="md:col-span-3">
+          <h2 className="section-title">
+            From engineering sites to shipping software.
+          </h2>
         </div>
-        <div className="grid gap-3 text-sm">
-          {[
-            '100+ clients delivered',
-            'AWS Certified Cloud Practitioner (2025)',
-            'Postgraduate Certificate in IT, University of Auckland',
-            'B.E. (Hons) Mechanical Engineering, University of Auckland',
-            'Based in Auckland, NZ',
-          ].map((item) => (
-            <div key={item} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-slate-700">
-              {item}
-            </div>
-          ))}
+
+        <div className="md:col-span-9">
+          <div className="max-w-measure space-y-5 text-lg leading-[1.65] text-ink-mid">
+            <p>
+              These days I build with React, Node and cloud tooling at Gherkin Media — client web
+              apps, REST APIs, WordPress work, and the in-house AI brain the team now runs on. Most
+              of what I ship is unglamorous and load-bearing: migrations, performance work, the
+              integration nobody wants to own.
+            </p>
+            <p>
+              I also mentor the interns — code reviews, pair programming, and the kind of structured
+              feedback I wish I’d had when I switched careers.
+            </p>
+            <p className="text-ink-soft">
+              When I’m not coding, I’m on a pickleball court or chasing a good flat white around
+            Auckland.
+            </p>
+          </div>
+
+          <dl className="mt-10 max-w-measure md:mt-12">
+            {credentials.map((item) => (
+              <div
+                key={item.award}
+                className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-rule-soft py-3 last:border-b"
+              >
+                <dt className="text-[0.9375rem] text-ink">{item.award}</dt>
+                <dd className="label">{item.detail}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
