@@ -4,6 +4,7 @@ import michaelReidImage from "../assets/MichaelReid2.png";
 import vvbakesImage from "../assets/vvbakes.png";
 import proquipxImage from "../assets/proquipx2.png";
 import misenImage from "../assets/Mise-frames.jpg";
+import rvBudgetImage from "../assets/rv-budget.png";
 
 export const projects: Project[] = [
 	{
@@ -46,6 +47,15 @@ export const projects: Project[] = [
 		heroImage: proquipxImage,
 		category: "Internal Tools",
 		liveUrl: "https://proquipx.com",
+	},
+	{
+		title: "RV Budget",
+		description:
+			"A household budget app my partner and I run on our own money, built to replace a PocketSmith subscription. Balances and transactions arrive straight from our banks through the Akahu API, categories and budgets stay ours to edit, and both laptops and both phones read the same shared figures.",
+		outcome: "Replaced a paid budgeting service for the household",
+		stack: ["Next.js", "TypeScript", "Akahu API", "Postgres"],
+		heroImage: rvBudgetImage,
+		category: "Personal Finance",
 	},
 	{
 		title: "Mise en",
