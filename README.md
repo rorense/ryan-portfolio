@@ -2,4 +2,4 @@
 
 Personal portfolio site.
 
-URL: https://rorense.github.io/ryan-portfolio/
+URL: https://ryan-orense-portfolio.vercel.app/
