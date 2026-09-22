@@ -26,7 +26,10 @@ export function Projects() {
               key={project.title}
               className="group grid items-center gap-x-10 gap-y-6 border-t border-rule py-8 last:border-b md:grid-cols-2 md:py-10"
             >
-              <div className="overflow-hidden bg-paper-deep">
+              {/* Odd plates cross to the right, so the eye zigzags down the page. */}
+              <div
+                className={`overflow-hidden bg-paper-deep ${index % 2 === 1 ? 'md:order-2' : ''}`}
+              >
                 <img
                   src={project.heroImage}
                   alt={`Screenshot of ${project.title}`}
