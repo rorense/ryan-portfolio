@@ -30,7 +30,7 @@ export const projects: Project[] = [
 	{
 		title: "vvbakes",
 		description:
-			"Built a Next.js site for a home bakery in Flat Bush — availability that closes out booked and short-notice dates, a menu with pricing, and a custom cake brief that arrives as a structured order request.",
+			"Built a Next.js site for a home bakery in Flat Bush, with availability that closes out booked and short-notice dates, a menu with pricing, and a custom cake brief that arrives as a structured order request.",
 		outcome: "A live booking calendar that takes orders without a checkout",
 		stack: ["Next.js", "React", "Vercel"],
 		heroImage: vvbakesImage,

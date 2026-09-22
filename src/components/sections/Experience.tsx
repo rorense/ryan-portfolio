@@ -78,7 +78,7 @@ export function Experience() {
                 className="grid gap-x-10 gap-y-4 border-t border-rule py-8 last:border-b md:grid-cols-[9rem_1fr] md:py-10"
               >
                 <div className="md:pt-2">
-                  <p className="label tabular-nums">{entry.period.replace(' - ', ' – ')}</p>
+                  <p className="label tabular-nums">{entry.period}</p>
                   {duration && (
                     <p className="mt-1 text-sm tabular-nums text-ink-soft">{duration}</p>
                   )}
@@ -110,9 +110,11 @@ export function Experience() {
                   <ul className="mt-5 max-w-measure space-y-2.5 text-ink-mid">
                     {entry.highlights.map((highlight) => (
                       <li key={highlight} className="flex gap-3 leading-[1.6]">
-                        <span aria-hidden="true" className="select-none text-ink-soft">
-                          &#8212;
-                        </span>
+                        {/* Hairline marker, drawn rather than set as a dash character. */}
+                        <span
+                          aria-hidden="true"
+                          className="mt-[0.8em] h-px w-3 shrink-0 bg-ink-soft/45"
+                        />
                         <span>{highlight}</span>
                       </li>
                     ))}

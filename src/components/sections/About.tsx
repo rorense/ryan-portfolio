@@ -17,13 +17,13 @@ export function About() {
         <div className="md:col-span-9">
           <div className="max-w-measure space-y-5 text-lg leading-[1.65] text-ink-mid">
             <p>
-              These days I build with React, Node and cloud tooling at Gherkin Media — client web
+              These days I build with React, Node and cloud tooling at Gherkin Media: client web
               apps, REST APIs, WordPress work, and the in-house AI brain the team now runs on. Most
-              of what I ship is unglamorous and load-bearing: migrations, performance work, the
+              of what I ship is unglamorous and load-bearing. Migrations, performance work, the
               integration nobody wants to own.
             </p>
             <p>
-              I also mentor the interns — code reviews, pair programming, and the kind of structured
+              I also mentor the interns. Code reviews, pair programming, and the kind of structured
               feedback I wish I’d had when I switched careers.
             </p>
             <p className="text-ink-soft">

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const SETTLE = [0.16, 1, 0.3, 1] as const
 
-// Authored as three lines, not wrapped into three — the stagger reads as type setting.
+// Authored as three lines, not wrapped into three, so the stagger reads as type setting.
 const headline = ['Software', 'engineer,', 'ex-mechanical.']
 
 const masthead = [

@@ -29,7 +29,7 @@ export function Projects() {
               <div className="overflow-hidden bg-paper-deep">
                 <img
                   src={project.heroImage}
-                  alt={`${project.title} — screenshot`}
+                  alt={`Screenshot of ${project.title}`}
                   loading={index === 0 ? 'eager' : 'lazy'}
                   decoding="async"
                   className="aspect-[16/10] w-full object-cover transition-transform duration-[900ms] ease-settle group-hover:scale-[1.018]"
@@ -39,7 +39,7 @@ export function Projects() {
               <div>
                 {/* Run-in meta, set as a line: category and stack read as one breath. */}
                 <p className="label">
-                  {project.category} · {project.stack.join(', ')}
+                  {project.category} | {project.stack.join(', ')}
                 </p>
 
                 <h3
