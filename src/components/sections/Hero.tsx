@@ -8,7 +8,7 @@ const headline = ['Software', 'engineer,', 'ex-mechanical.']
 const masthead = [
   { label: 'Based', value: 'Auckland, New Zealand' },
   { label: 'Now', value: 'Full stack developer, Gherkin Media' },
-  { label: 'Delivered', value: '100+ client projects' },
+  { label: 'Delivered', value: '600+ clients' },
   { label: 'Commerce', value: '$600k+ yearly Shopify orders' },
   { label: 'Certified', value: 'AWS Cloud Practitioner, 2025' },
 ]
