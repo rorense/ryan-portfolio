@@ -5,6 +5,7 @@ import vvbakesImage from "../assets/vvbakes.png";
 import proquipxImage from "../assets/proquipx2.png";
 import misenImage from "../assets/Mise-frames.jpg";
 import rvBudgetImage from "../assets/rv-budget.png";
+import tallyImage from "../assets/tally.png";
 
 export const projects: Project[] = [
 	{
@@ -56,6 +57,16 @@ export const projects: Project[] = [
 		stack: ["Next.js", "TypeScript", "Akahu API", "Postgres"],
 		heroImage: rvBudgetImage,
 		category: "Personal Finance",
+	},
+	{
+		title: "Tally",
+		description:
+			"An offline-first travel budget tracker for iOS and Android, built for a Europe trip. Spending goes in as local currency and the NZD figure comes from a live rate frozen against that expense, cashback and card conversion fees are tracked against what a trip really costs, and a partner joins the same trip with a code. It all works with no signal, then syncs over wifi.",
+		outcome: "A shared trip ledger that works with no signal",
+		stack: ["React Native", "Expo", "SQLite", "Supabase"],
+		heroImage: tallyImage,
+		category: "Travel + Money",
+		githubUrl: "https://github.com/rorense/Tally",
 	},
 	{
 		title: "Mise en",
