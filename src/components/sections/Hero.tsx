@@ -9,7 +9,7 @@ const masthead = [
   { label: 'Based', value: 'Auckland, New Zealand' },
   { label: 'Now', value: 'Full stack developer, Gherkin Media' },
   { label: 'Delivered', value: '600+ clients' },
-  { label: 'Commerce', value: '$600k+ yearly Shopify orders' },
+  { label: 'Commerce', value: '$1 million+ yearly Shopify orders' },
   { label: 'Certified', value: 'AWS Cloud Practitioner, 2025' },
 ]
 

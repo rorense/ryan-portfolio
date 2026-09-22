@@ -10,7 +10,7 @@ export function Projects() {
 
         <div className="md:col-span-9">
           <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
-            Five projects, from a Shopify storefront turning over $600k a year to a recipe app I
+            Five projects, from a Shopify storefront turning over $1 million a year to a recipe app I
             built because I didn’t want to pay for one.
           </p>
         </div>

@@ -10,7 +10,7 @@ export const projects: Project[] = [
 		title: "Paradox Roasters",
 		description:
 			"Designed and built a custom Shopify experience with tailored Liquid components, speed tune-ups, and a smoother checkout flow so regular coffee orders felt effortless.",
-		outcome: "$600k+ annual online orders",
+		outcome: "$1 million+ annual online orders",
 		stack: ["Shopify", "Liquid", "Performance Optimization"],
 		heroImage: paradoxImage,
 		category: "E-commerce",
