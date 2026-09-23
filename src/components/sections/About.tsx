@@ -16,10 +16,14 @@ export function About() {
           <div className="max-w-measure space-y-5 text-lg leading-[1.65] text-ink-mid">
             <p>
               These days I’m at Gherkin Media, where most of my work is WordPress and Shopify, plus
-              REST APIs and the in-house AI brain the team now runs on. A lot of it is unglamorous
-              and load-bearing, like migrations, performance work and the integration nobody else
-              wants to touch. I’m oddly fond of that stuff. For my own projects I reach for React,
-              Next.js and React Native.
+              REST APIs. A lot of it is unglamorous and load-bearing, like migrations, performance
+              work and the integration nobody else wants to touch. I’m oddly fond of that stuff. For
+              my own projects I reach for React, Next.js and React Native.
+            </p>
+            <p>
+              The job has plenty of AI in it too, mostly automating redundant, repetitive tasks. I
+              built the in-house AI brain the team now runs on, and if something is boring and keeps
+              coming back, it’s next on my list.
             </p>
             <p>
               I also mentor our interns. Not long ago I was the career-changer asking all the
