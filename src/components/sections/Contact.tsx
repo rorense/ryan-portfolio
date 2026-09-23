@@ -30,9 +30,9 @@ export function Contact() {
                   {...(channel.href.startsWith('http')
                     ? { target: '_blank', rel: 'noreferrer' }
                     : {})}
-                  className="group flex flex-wrap items-baseline gap-x-8 gap-y-1 py-5 transition-colors duration-200 hover:text-vermilion md:gap-x-10 md:py-6"
+                  className="group flex flex-wrap items-baseline gap-x-8 gap-y-1 py-5 transition-colors duration-200 hover:text-vermilion focus-visible:text-vermilion md:gap-x-10 md:py-6"
                 >
-                  <span className="label w-24 transition-colors duration-200 group-hover:text-vermilion">
+                  <span className="label w-24 transition-colors duration-200 group-hover:text-vermilion group-focus-visible:text-vermilion">
                     {channel.label}
                   </span>
                   <span className="font-serif text-xl tracking-[-0.01em] md:text-2xl">
@@ -40,7 +40,7 @@ export function Contact() {
                   </span>
                   <span
                     aria-hidden="true"
-                    className="ml-auto hidden translate-x-0 font-sans text-sm text-ink-soft transition-[transform,color] duration-300 ease-settle group-hover:translate-x-1.5 group-hover:text-vermilion md:block"
+                    className="ml-auto hidden translate-x-0 font-sans text-sm text-ink-soft transition-[transform,color] duration-300 ease-settle group-hover:translate-x-1.5 group-hover:text-vermilion group-focus-visible:translate-x-1.5 group-focus-visible:text-vermilion md:block"
                   >
                     &#8594;
                   </span>

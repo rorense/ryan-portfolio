@@ -52,12 +52,12 @@ function formatDuration(period: string) {
   const months = totalMonths % 12
 
   if (years > 0 && months > 0) {
-    return `${years} yr${years === 1 ? '' : 's'} ${months} mo${months === 1 ? '' : 's'}`
+    return `${years} year${years === 1 ? '' : 's'}, ${months} month${months === 1 ? '' : 's'}`
   }
   if (years > 0) {
-    return `${years} yr${years === 1 ? '' : 's'}`
+    return `${years} year${years === 1 ? '' : 's'}`
   }
-  return `${months} mo${months === 1 ? '' : 's'}`
+  return `${months} month${months === 1 ? '' : 's'}`
 }
 
 export function Experience() {
@@ -97,14 +97,14 @@ export function Experience() {
                         href={entry.companyUrl}
                         target="_blank"
                         rel="noreferrer"
-                        className="underline decoration-rule decoration-1 underline-offset-4 transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
+                        className="underline decoration-ink-soft decoration-1 underline-offset-4 transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
                       >
                         {entry.company}
                       </a>
                     ) : (
                       entry.company
                     )}
-                    {entry.emoji ? ` ${entry.emoji}` : ''}
+                    {entry.emoji && <span aria-hidden="true"> {entry.emoji}</span>}
                   </p>
 
                   <ul className="mt-5 max-w-measure space-y-2.5 text-ink-mid">

@@ -4,6 +4,12 @@ import type { Project } from '../../types'
 const lead = projects.filter((project) => project.featured)
 const more = projects.filter((project) => !project.featured)
 
+// The intro counts the data, spelled out while that reads well; past twelve it falls back to digits.
+const count =
+  ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'][
+    projects.length
+  ] ?? projects.length
+
 // Links look like links: ink text, a visible underline, and a hit area 44px tall.
 const linkClass =
   'label inline-block py-[0.8125rem] text-ink underline decoration-ink-soft decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion'
@@ -48,8 +54,8 @@ export function Projects() {
 
         <div className="md:col-span-9">
           <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
-            Seven projects, from a Shopify storefront turning over $1 million a year to a recipe app I
-            built because I didn’t want to pay for one.
+            {count} projects, from a Shopify storefront turning over $1 million a year to a recipe app
+            I built because I didn’t want to pay for one.
           </p>
         </div>
       </div>

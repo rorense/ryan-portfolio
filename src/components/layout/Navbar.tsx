@@ -21,7 +21,7 @@ export function Navbar() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="label transition-colors duration-200 hover:text-vermilion"
+                className="label py-3 transition-colors duration-200 hover:text-vermilion"
               >
                 {item.label}
               </a>
@@ -30,7 +30,7 @@ export function Navbar() {
         </ul>
 
         {/* Mobile keeps only the one link that matters; the page is a single scroll. */}
-        <a href="#contact" className="label transition-colors duration-200 hover:text-vermilion md:hidden">
+        <a href="#contact" className="label -my-3 py-3 transition-colors duration-200 hover:text-vermilion md:hidden">
           Contact
         </a>
       </nav>

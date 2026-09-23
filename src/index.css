@@ -13,7 +13,7 @@
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
     scrollbar-width: thin;
-    scrollbar-color: #c9bfaa #faf7f0;
+    scrollbar-color: #c9bfaa theme('colors.paper');
   }
 
   body {
@@ -70,7 +70,7 @@
 
   ::-webkit-scrollbar-thumb {
     background-color: #c9bfaa;
-    border: 3px solid #faf7f0;
+    border: 3px solid theme('colors.paper');
     border-radius: 99px;
   }
 

@@ -40,7 +40,7 @@ export function Hero() {
             </a>
             <a
               href="#contact"
-              className="label underline decoration-rule decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
+              className="label py-3.5 text-ink underline decoration-ink-soft decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
             >
               Get in touch
             </a>

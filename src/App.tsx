@@ -13,6 +13,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-paper text-ink">
+      <a
+        href="#top"
+        className="label sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-ink focus:px-4 focus:py-3 focus:text-paper"
+      >
+        Skip to content
+      </a>
       {pickleMode && <PickleRain />}
       <Navbar />
       <main id="top">
