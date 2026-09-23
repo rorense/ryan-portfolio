@@ -49,13 +49,13 @@ export function Projects() {
     <section id="projects" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
       <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
         <div className="md:col-span-3">
-          <h2 className="section-title">Selected work.</h2>
+          <h2 className="section-title">Things I’ve shipped.</h2>
         </div>
 
         <div className="md:col-span-9">
           <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
-            {count} projects, from a Shopify storefront turning over $1 million a year to a recipe app
-            I built because I didn’t want to pay for one.
+            {count} projects, a mix of client work and my own. A couple of mine exist because I’d
+            rather build an app than pay for one.
           </p>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function Projects() {
       <div className="mt-14 grid gap-x-10 gap-y-6 md:mt-16 md:grid-cols-12">
         <div className="md:col-span-3">
           <h3 className="font-serif text-xl font-normal leading-[1.15] text-ink md:text-2xl">
-            Also built.
+            Also in the shed.
           </h3>
         </div>
 

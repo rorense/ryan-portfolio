@@ -9,11 +9,11 @@ export const experience: ExperienceEntry[] = [
     current: true,
     emoji: '🥒',
     highlights: [
-      'Maintained websites for 600+ clients.',
-      'Delivered REST APIs, WordPress customisations, and SQL/NoSQL integrations.',
-      'Built the in-house AI brain, which keeps each customer’s context on hand and automates repetitive day-to-day tasks.',
+      'Look after websites for 600+ clients.',
+      'Build REST APIs and SQL/NoSQL integrations, and talk WordPress into things it was never designed to do.',
+      'Built the in-house AI brain. It keeps every customer’s context on hand so nobody has to remember it, and takes the repetitive jobs off everyone’s plate.',
       'Saved the company tens of thousands of dollars through website migrations and performance optimisation.',
-      'Mentored and managed interns through code reviews, pair programming and structured feedback.',
+      'Mentor and manage the interns through code reviews, pair programming and structured feedback.',
     ],
   },
   {
@@ -28,10 +28,10 @@ export const experience: ExperienceEntry[] = [
   },
   {
     role: 'Plant and Equipment / Mechanical Engineer',
-    company: 'Ghella Abergelide JV',
+    company: 'Ghella Abergeldie JV',
     period: 'Apr 2021 – Mar 2023',
     highlights: [
-      "Worked on Auckland's Central Interceptor infrastructure project.",
+      'Looked after plant and equipment on Auckland’s Central Interceptor tunnel.',
       'Implemented a site-wide pre-start check app that improved efficiency by 60%.',
     ],
   },

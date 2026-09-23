@@ -9,9 +9,7 @@ export function About() {
     <section id="about" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
       <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
         <div className="md:col-span-3">
-          <h2 className="section-title">
-            From engineering sites to shipping software.
-          </h2>
+          <h2 className="section-title">Less mud, more merge conflicts.</h2>
         </div>
 
         <div className="md:col-span-9">
@@ -19,16 +17,17 @@ export function About() {
             <p>
               These days I build with React, Node and cloud tooling at Gherkin Media: client web
               apps, REST APIs, WordPress work, and the in-house AI brain the team now runs on. Most
-              of what I ship is unglamorous and load-bearing. Migrations, performance work, the
-              integration nobody wants to own.
+              of what I ship is unglamorous and load-bearing, like migrations, performance work and
+              the integration nobody else wants to touch. I’m oddly fond of that stuff.
             </p>
             <p>
-              I also mentor the interns. Code reviews, pair programming, and the kind of structured
-              feedback I wish I’d had when I switched careers.
+              I also mentor our interns. Not long ago I was the career-changer asking all the
+              obvious questions, so I try to give them the patient, honest code reviews I wanted
+              back then.
             </p>
             <p className="text-ink-soft">
-              When I’m not coding, I’m on a pickleball court or chasing a good flat white around
-            Auckland.
+              Outside work I’m usually hunting down Auckland’s best flat white or playing
+              pickleball. Add a job at Gherkin Media and the pickle theme gets a bit out of hand.
             </p>
           </div>
 

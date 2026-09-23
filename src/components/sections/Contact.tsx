@@ -13,13 +13,13 @@ export function Contact() {
     <section id="contact" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
       <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
         <div className="md:col-span-3">
-          <h2 className="section-title">Get in touch.</h2>
+          <h2 className="section-title">Say hello.</h2>
         </div>
 
         <div className="md:col-span-9">
           <p className="max-w-measure text-lg leading-[1.6] text-ink-mid">
-            If you’re hiring, or you have something that needs building properly, the fastest way to
-            reach me is email. I read everything.
+            Hiring, or have something that needs building? Email is the quickest way to reach me.
+            I read them all, including the ones from recruiters.
           </p>
 
           <ul className="mt-10 md:mt-12">

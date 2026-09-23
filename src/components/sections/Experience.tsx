@@ -65,7 +65,7 @@ export function Experience() {
     <section id="experience" className="wrap scroll-mt-20 border-t border-rule py-14 md:py-20">
       <div className="grid gap-x-10 gap-y-8 md:grid-cols-12">
         <div className="md:col-span-3">
-          <h2 className="section-title">Where I’ve worked.</h2>
+          <h2 className="section-title">Where I’ve clocked in.</h2>
         </div>
 
         <div className="md:col-span-9">

@@ -3,6 +3,7 @@ const headline = ['Software', 'engineer,', 'ex-mechanical.']
 
 const masthead = [
   { label: 'Based', value: 'Auckland, New Zealand' },
+  { label: 'Open to', value: 'Hybrid and remote roles' },
   { label: 'Now', value: 'Full stack developer, Gherkin Media' },
   { label: 'Maintained', value: '600+ client websites' },
   { label: 'Commerce', value: '$1 million+ yearly Shopify orders' },
@@ -22,13 +23,18 @@ export function Hero() {
             ))}
           </h1>
 
+          <p className="mt-5 font-serif text-xl italic leading-snug text-ink-mid md:mt-6 md:text-2xl">
+            Building software I’d rather not pay for
+          </p>
+
           <div className="rule-draw mt-7 h-px bg-ink md:mt-9" />
 
           <p className="mt-7 max-w-measure text-lg leading-[1.6] text-ink-mid md:text-xl">
-            I started on Auckland’s Central Interceptor, looking after plant and equipment. What I
-            kept noticing was simpler than the tunnel: when operations had better software,
-            everything moved faster. So I learned to build it. Now I ship full stack products for
-            teams that need software to work properly, day to day.
+            I started out on Auckland’s Central Interceptor, looking after the plant and equipment
+            on what is, technically, a very large sewer. I kept noticing that better software sped
+            the site up more than a bigger spanner ever could, so I hung up the hi-vis and learned
+            to build it. I still judge my work the way I judged the plant: does it start first
+            time on a cold Monday?
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4 md:mt-11">
@@ -42,7 +48,7 @@ export function Hero() {
               href="#contact"
               className="label py-3.5 text-ink underline decoration-ink-soft decoration-1 underline-offset-[7px] transition-colors duration-200 hover:text-vermilion hover:decoration-vermilion"
             >
-              Get in touch
+              Say hello
             </a>
           </div>
         </div>
