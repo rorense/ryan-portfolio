@@ -1,6 +1,6 @@
 const credentials = [
-  { award: 'B.E. (Hons) Mechanical Engineering', detail: 'University of Auckland' },
-  { award: 'Postgraduate Certificate in IT', detail: 'University of Auckland' },
+  { award: 'B.E. (Hons) Mechanical Engineering', detail: 'University of Auckland · 2020' },
+  { award: 'Postgraduate Certificate in IT', detail: 'University of Auckland · 2022' },
   { award: 'AWS Certified Cloud Practitioner', detail: '2025' },
 ]
 
@@ -15,10 +15,11 @@ export function About() {
         <div className="md:col-span-9">
           <div className="max-w-measure space-y-5 text-lg leading-[1.65] text-ink-mid">
             <p>
-              These days I build with React, Node and cloud tooling at Gherkin Media: client web
-              apps, REST APIs, WordPress work, and the in-house AI brain the team now runs on. Most
-              of what I ship is unglamorous and load-bearing, like migrations, performance work and
-              the integration nobody else wants to touch. I’m oddly fond of that stuff.
+              These days I’m at Gherkin Media, where most of my work is WordPress and Shopify, plus
+              REST APIs and the in-house AI brain the team now runs on. A lot of it is unglamorous
+              and load-bearing, like migrations, performance work and the integration nobody else
+              wants to touch. I’m oddly fond of that stuff. For my own projects I reach for React,
+              Next.js and React Native.
             </p>
             <p>
               I also mentor our interns. Not long ago I was the career-changer asking all the
@@ -38,7 +39,7 @@ export function About() {
                 className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 border-t border-rule-soft py-3 last:border-b"
               >
                 <dt className="text-[0.9375rem] text-ink">{item.award}</dt>
-                <dd className="label">{item.detail}</dd>
+                <dd className="label tabular-nums">{item.detail}</dd>
               </div>
             ))}
           </dl>

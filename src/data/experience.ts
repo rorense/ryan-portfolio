@@ -9,8 +9,8 @@ export const experience: ExperienceEntry[] = [
     current: true,
     emoji: '🥒',
     highlights: [
-      'Look after websites for 600+ clients.',
-      'Build REST APIs and SQL/NoSQL integrations, and talk WordPress into things it was never designed to do.',
+      'Look after websites for 600+ clients across New Zealand, Australia, the US and the UK.',
+      'Spend most days in WordPress and Shopify, talking both into things they were never designed to do. The rest goes on REST APIs and SQL/NoSQL integrations.',
       'Built the in-house AI brain. It keeps every customer’s context on hand so nobody has to remember it, and takes the repetitive jobs off everyone’s plate.',
       'Saved the company tens of thousands of dollars through website migrations and performance optimisation.',
       'Mentor and manage the interns through code reviews, pair programming and structured feedback.',
