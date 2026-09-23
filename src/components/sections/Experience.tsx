@@ -15,7 +15,7 @@ const monthIndex: Record<string, number> = {
   Dec: 11,
 }
 
-function parseMonthYear(value: string) {
+function parseMonthYear(value = '') {
   const [month, year] = value.trim().split(' ')
   const monthValue = monthIndex[month]
   const yearValue = Number(year)
@@ -28,7 +28,7 @@ function parseMonthYear(value: string) {
 }
 
 function formatDuration(period: string) {
-  const [startRaw, endRaw] = period.split(' - ').map((part) => part.trim())
+  const [startRaw, endRaw] = period.split(/ [-–] /).map((part) => part.trim())
   const start = parseMonthYear(startRaw)
   if (!start) {
     return ''

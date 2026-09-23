@@ -11,9 +11,9 @@ export const projects: Project[] = [
 	{
 		title: "Paradox Roasters",
 		description:
-			"Designed and built a custom Shopify experience with tailored Liquid components, speed tune-ups, and a smoother checkout flow so regular coffee orders felt effortless.",
+			"Designed and built the whole Shopify store for an Australian coffee roaster: the theme, custom Liquid sections, performance tuning and the checkout flow.",
 		outcome: "$1 million+ annual online orders",
-		stack: ["Shopify", "Liquid", "Performance Optimization"],
+		stack: ["Shopify", "Liquid"],
 		heroImage: paradoxImage,
 		category: "E-commerce",
 		liveUrl: "https://paradoxroasters.com.au",
@@ -22,9 +22,9 @@ export const projects: Project[] = [
 	{
 		title: "Michael Reid Gallery Mobile App",
 		description:
-			"Built a React Native app that lets collectors and art lovers browse works, follow events, and stay updated through content synced with an Expo-backed database setup.",
-		outcome: "Shipped live on the App Store",
-		stack: ["React Native", "Expo", "API Integrations"],
+			"An iPhone app where art collectors keep a record of the works they own. They photograph a piece or use an image sent by email, then file it into collections with the artist, year, edition, dimensions and price. Records and images are stored in Appwrite.",
+		outcome: "Live on the App Store",
+		stack: ["React Native", "Expo", "Appwrite"],
 		heroImage: michaelReidImage,
 		category: "Mobile App",
 		liveUrl: "https://apps.apple.com/nz/app/michael-reid-gallery/id6742937867",
@@ -61,21 +61,21 @@ export const projects: Project[] = [
 	{
 		title: "Tally",
 		description:
-			"An offline-first travel budget tracker for iOS and Android, built for a Europe trip. Spending goes in as local currency and the NZD figure comes from a live rate frozen against that expense, cashback and card conversion fees are tracked against what a trip really costs, and a partner joins the same trip with a code. It all works with no signal, then syncs over wifi.",
+			"An offline-first travel budget tracker for iOS and Android, built for a Europe trip. Each expense is entered in local currency and locked to the live NZD rate at that moment. Card conversion fees and cashback count too, so the total is what the trip really cost. A partner joins the same trip with a code, and it all works with no signal, then syncs over wifi.",
 		outcome: "A shared trip ledger that works with no signal",
 		stack: ["React Native", "Expo", "SQLite", "Supabase"],
 		heroImage: tallyImage,
-		category: "Travel + Money",
+		category: "Travel & Money",
 		githubUrl: "https://github.com/rorense/Tally",
 	},
 	{
 		title: "Mise en",
 		description:
-			"A personal mobile app I built to keep track of recipes I have made over time. Instead of paying for another service, I built one that fits exactly how I cook.",
-		outcome: "Personal recipe tracker built from scratch",
-		stack: ["Mobile App", "Personal Product", "GitHub"],
+			"A recipe library and cook log for iOS and Android, built around how I cook. Search takes filters like has:chicken, no:nuts and mins<30, and each cook is logged, with a photo if I want one. Everything stays on the phone in SQLite.",
+		outcome: "Recipes found by ingredient and cooking time in one query",
+		stack: ["React Native", "Expo", "Expo Router", "SQLite"],
 		heroImage: misenImage,
-		category: "Food + Productivity",
+		category: "Food & Productivity",
 		githubUrl: "https://github.com/rorense/mise",
 	},
 ];

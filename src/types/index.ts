@@ -19,8 +19,3 @@ export interface ExperienceEntry {
   highlights: string[]
   emoji?: string
 }
-
-export interface SkillGroup {
-  label: string
-  skills: string[]
-}

@@ -92,6 +92,29 @@
   .section-title {
     @apply font-serif text-2xl font-normal leading-[1.15] text-ink md:text-[1.75rem];
   }
+
+  /* The page's one piece of motion: the hero rule draws in like a pen stroke. */
+  .rule-draw {
+    transform-origin: left;
+    animation: rule-draw 1s theme('transitionTimingFunction.settle') 0.2s both;
+  }
+}
+
+@keyframes rule-draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes pickle-fall {
+  from {
+    transform: translateY(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(110vh);
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
