@@ -13,7 +13,7 @@ export const projects: Project[] = [
 		description:
 			"Designed and built the whole Shopify store for an Australian coffee roaster: the theme, custom Liquid sections, performance tuning and the checkout flow.",
 		outcome: "$1 million+ annual online orders",
-		stack: ["Shopify", "Liquid"],
+		stack: ["Shopify", "Liquid", "JavaScript", "CSS"],
 		heroImage: paradoxImage,
 		category: "E-commerce",
 		liveUrl: "https://paradoxroasters.com.au",
@@ -28,6 +28,7 @@ export const projects: Project[] = [
 		heroImage: michaelReidImage,
 		category: "Mobile App",
 		liveUrl: "https://apps.apple.com/nz/app/michael-reid-gallery/id6742937867",
+		featured: true,
 	},
 	{
 		title: "vvbakes",
@@ -67,6 +68,7 @@ export const projects: Project[] = [
 		heroImage: tallyImage,
 		category: "Travel & Money",
 		githubUrl: "https://github.com/rorense/Tally",
+		featured: true,
 	},
 	{
 		title: "Mise en",
