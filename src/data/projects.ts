@@ -6,6 +6,7 @@ import proquipxImage from "../assets/proquipx2.png";
 import misenImage from "../assets/Mise-frames.jpg";
 import rvBudgetImage from "../assets/rv-budget.png";
 import tallyImage from "../assets/tally.png";
+import inzelaImage from "../assets/inzela.jpg";
 
 export const projects: Project[] = [
 	{
@@ -31,6 +32,17 @@ export const projects: Project[] = [
 		featured: true,
 	},
 	{
+		title: "INZELA",
+		description:
+			"Rebuilt the Wix site of an Auckland agency that places Indonesian students in New Zealand high schools and universities. The new site runs on Next.js with a Sanity admin, where the client adds testimonials, photos and news, and a publish goes live in about five seconds. The Indonesian copy carried over word for word, and so did every URL.",
+		outcome: "Lighthouse performance up from 74 to 96 on mobile, at under a third of the page weight",
+		stack: ["Next.js", "TypeScript", "Sanity", "Tailwind CSS"],
+		heroImage: inzelaImage,
+		category: "Website Rebuild",
+		// ponytail: vercel.app until the domain is connected, then https://www.inzela.com (the canonical host)
+		liveUrl: "https://inzela.vercel.app",
+	},
+	{
 		title: "vvbakes",
 		description:
 			"Built a Next.js site for a home bakery in Flat Bush. The calendar closes out booked and short-notice dates, so nobody can order a three-tier cake for tomorrow morning. There’s a menu with pricing, and custom cake briefs arrive as tidy, structured order requests.",
@@ -39,6 +51,7 @@ export const projects: Project[] = [
 		heroImage: vvbakesImage,
 		category: "Orders & Booking",
 		liveUrl: "https://vvbakes.co.nz",
+		featured: true,
 	},
 	{
 		title: "Proquip Solutions Dashboard",
