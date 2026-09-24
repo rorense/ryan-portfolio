@@ -17,7 +17,7 @@ export const projects: Project[] = [
 		stack: ["Shopify", "Liquid", "JavaScript", "CSS"],
 		heroImage: paradoxImage,
 		category: "E-commerce",
-		liveUrl: "https://paradoxroasters.com.au",
+		liveUrl: "https://paradoxroasters.com",
 		featured: true,
 	},
 	{
